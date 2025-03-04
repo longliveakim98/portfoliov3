@@ -34,7 +34,7 @@ const Hero = () => {
             variants={{
               initial: { x: 0 },
               animate: {
-                x: [10, -10],
+                x: [40, -10],
                 transition: {
                   duration: 3,
                   ease: "linear",
