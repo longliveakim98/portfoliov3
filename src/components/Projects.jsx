@@ -17,6 +17,7 @@ const Projects = () => {
       >
         Projects
       </motion.h2>
+
       <div className="flex flex-col gap-12">
         {PROJECTS.map((project, i) => (
           <div key={i} className="flex flex-col lg:flex-row gap-6 items-center">
@@ -69,9 +70,53 @@ const Projects = () => {
                     {tech.alt === "SQLite" && (
                       <SiSqlite className="text-cyan-500 text-lg" />
                     )}
+                    {tech.alt === "Nivo Charts" && (
+                      <img src="/nivo.png" alt="Nivo Charts" className="w-4" />
+                    )}
                     <span>{tech.alt}</span>
                   </div>
                 ))}
+              </div>
+              <div
+                key={project.id || i} // Ensure a unique key for React
+                className="mt-10 flex flex-col gap-4 z-20 items-center justify-center "
+                onPointerDown={(e) => e.stopPropagation()}
+              >
+                <div className="flex gap-4">
+                  {project.liveDemo && (
+                    <a
+                      href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-500 px-4 py-2 rounded-lg cursor-pointer z-50 pointer-events-auto"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {project.id === 4 && (
+                    <a
+                      href="https://spotify-clone-full-stack-mwn2.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-500 px-4 py-2 rounded-lg cursor-pointer z-50"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      Admin Page
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-gray-700 px-4 py-2 rounded-lg cursor-pointer z-50"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           </div>

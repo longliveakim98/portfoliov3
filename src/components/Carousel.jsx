@@ -134,11 +134,11 @@ const Carousel = () => {
                       </div>
                     </AnimatePresence>
 
-                    <div className="flex gap-2">
+                    <div className="grid grid-cols-3 gap-2 mt-2">
                       {project.technologies.map((tech, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-1 rounded bg-stone-900 p-2 text-lg font-medium text-stone-300"
+                          className="flex items-center justify-center gap-2 rounded bg-stone-900 p-2 text-lg font-medium text-stone-300"
                         >
                           {tech.alt === "ReactJs" && (
                             <motion.div
@@ -152,7 +152,7 @@ const Carousel = () => {
                                   repeatType: "loop",
                                 },
                               }}
-                              className="  flex items-center justify-center"
+                              className="  flex items-center justify-center px-2"
                             >
                               <RiReactjsLine className="text-cyan-500 h-8 w-8" />
                             </motion.div>
@@ -162,7 +162,7 @@ const Carousel = () => {
                             <motion.div
                               initial="initial"
                               animate="hovered"
-                              className=" whitespace-nowrap overflow-hidden relative"
+                              className=" whitespace-nowrap overflow-hidden relative  "
                             >
                               <motion.div
                                 variants={{
@@ -174,7 +174,7 @@ const Carousel = () => {
                                   repeat: Infinity,
                                   repeatType: "loop",
                                 }}
-                                className="flex items-center justify-center"
+                                className="flex items-center justify-center px-2"
                               >
                                 <RiTailwindCssFill className="text-blue-500 w-8 h-8" />
                               </motion.div>
@@ -224,7 +224,7 @@ const Carousel = () => {
                                   ease: "circInOut",
                                 },
                               }}
-                              className=" flex items-center justify-center"
+                              className=" flex items-center justify-center px-2"
                             >
                               <SiTypescript className="text-blue-600 w-8 h-8" />
                             </motion.div>
@@ -244,7 +244,7 @@ const Carousel = () => {
                                   ease: "circInOut",
                                 },
                               }}
-                              className="flex items-center justify-center"
+                              className="flex items-center justify-center px-2"
                             >
                               <TbBrandFramerMotion className="text-purple-500 w-8 h-8" />
                             </motion.div>
@@ -261,7 +261,7 @@ const Carousel = () => {
                                   repeatType: "mirror",
                                 },
                               }}
-                              className="h-8 w-8 flex items-center justify-center"
+                              className="h-8 w-8 flex items-center justify-center mx-4 "
                             >
                               <img
                                 src="/nivo.png"
@@ -283,7 +283,7 @@ const Carousel = () => {
                                   repeat: Infinity,
                                 },
                               }}
-                              className=" flex items-center justify-center"
+                              className=" flex items-center justify-center px-2"
                             >
                               <SiMongodb className="text-7xl text-green-500 h-8 w-8" />
                             </motion.div>
@@ -299,7 +299,7 @@ const Carousel = () => {
                                   repeat: Infinity,
                                 },
                               }}
-                              className=" flex items-center justify-center"
+                              className=" flex items-center justify-center px-2"
                             >
                               <FaLaravel className="text-7xl text-red-500 h-8 w-8" />
                             </motion.div>
@@ -318,9 +318,9 @@ const Carousel = () => {
                                   repeatType: "reverse",
                                 },
                               }}
-                              className=" flex items-center justify-center"
+                              className=" flex items-center justify-center px-2"
                             >
-                              <SiSqlite className="text-7xl text-cyan-500 h-8 w-8" />
+                              <SiSqlite className="text-7xl text-cyan-500 h-8 w-8 " />
                             </motion.div>
                           )}
 
